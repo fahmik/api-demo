@@ -91,6 +91,7 @@ class Post
         if ($this->comments->contains($comment)) {
             $this->comments->removeElement($comment);
             // set the owning side to null (unless already changed)
+
             if ($comment->getPost() === $this) {
                 $comment->setPost(null);
             }
